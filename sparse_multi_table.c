@@ -35,8 +35,8 @@ void sparse_multi_init(sparse_multi_table* smt, int size, int entry_sz) {
   unsigned int i;
   smt->size = size;
   smt->num_tbls = NUM_TBLS(smt->size);
-  smt->entries = (sparse_table *)pvPortMalloc(smt->num_tbls*sizeof(sparse_table));
-  smt->offsets = (unsigned int *)pvPortMalloc(smt->num_tbls*sizeof(unsigned int));
+  smt->entries = (sparse_table *)malloc(smt->num_tbls*sizeof(sparse_table));
+  smt->offsets = (unsigned int *)malloc(smt->num_tbls*sizeof(unsigned int));
   for(i=0;i<smt->num_tbls;++i) {
     sparse_init(&smt->entries[i], size/smt->num_tbls, entry_sz);
     smt->offsets[i] = smt->size / smt->num_tbls * i;
@@ -69,8 +69,8 @@ unsigned char * sparse_multi_lift(sparse_multi_table *smt, unsigned char * mempt
   memset(smt, 0, sizeof(sparse_multi_table));
   LIFT_ADVANCE(smt->num_tbls, memptr);
   LIFT_ADVANCE(smt->size, memptr);
-  smt->entries = (sparse_table *)pvPortMalloc(smt->num_tbls*sizeof(sparse_table));
-  smt->offsets = (unsigned int *)pvPortMalloc(smt->num_tbls*sizeof(unsigned int));
+  smt->entries = (sparse_table *)malloc(smt->num_tbls*sizeof(sparse_table));
+  smt->offsets = (unsigned int *)malloc(smt->num_tbls*sizeof(unsigned int));
   for(i=0;i<smt->num_tbls;++i) {
     memptr = sparse_lift(&smt->entries[i], memptr);
     smt->offsets[i] = smt->size / smt->num_tbls * i;

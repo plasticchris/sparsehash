@@ -8,7 +8,7 @@ void bit_array_resize(bit_array* ba, int size) {
   if( size % 8 != 0 )
     size+=8;
   size/=8;
-  ba->bits = (unsigned char*)pvPortRealloc(ba->bits, size);
+  ba->bits = (unsigned char*)realloc(ba->bits, size);
   if( size > ba->size/8 )
     memset(ba->bits+ba->size/8, 0, size - ba->size/8);
   ba->size = size*8;
@@ -76,7 +76,7 @@ unsigned char* bit_array_dump( bit_array* ba, unsigned char * memptr ) {
 }
 unsigned char* bit_array_lift( bit_array* ba, unsigned char * memptr ) {
   LIFT_ADVANCE(ba->size, memptr);
-  ba->bits = (unsigned char*)pvPortMalloc(ba->size/8);
+  ba->bits = (unsigned char*)malloc(ba->size/8);
   memcpy(ba->bits, memptr, ba->size/8);
   return memptr+ba->size/8;
 }

@@ -25,7 +25,7 @@ unsigned char * sparse_lift(sparse_table *st, unsigned char * memptr) {
   LIFT_ADVANCE(st->entry_sz, memptr);
   st->allocated = st->size;
   memptr=bit_array_lift(&st->presence, memptr);
-  st->entries = (unsigned char*)pvPortMalloc(st->size*st->entry_sz);
+  st->entries = (unsigned char*)malloc(st->size*st->entry_sz);
   memcpy(st->entries, memptr, st->size*st->entry_sz);
   return memptr+st->size*st->entry_sz;
 }
