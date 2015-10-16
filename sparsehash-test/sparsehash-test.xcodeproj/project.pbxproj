@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBA8983E1BD1B4B900B37552 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA8983D1BD1B4B900B37552 /* main.c */; };
+		DBA8985A1BD1B4CB00B37552 /* sparse_multi_table.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898441BD1B4CB00B37552 /* sparse_multi_table.c */; settings = {ASSET_TAGS = (); }; };
+		DBA8985B1BD1B4CB00B37552 /* sparse_table.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898451BD1B4CB00B37552 /* sparse_table.c */; settings = {ASSET_TAGS = (); }; };
+		DBA8985C1BD1B4CB00B37552 /* bit_array.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898471BD1B4CB00B37552 /* bit_array.c */; settings = {ASSET_TAGS = (); }; };
+		DBA8985E1BD1B4CB00B37552 /* circular_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA8984C1BD1B4CB00B37552 /* circular_buffer.c */; settings = {ASSET_TAGS = (); }; };
+		DBA8985F1BD1B4CB00B37552 /* dump_xsum.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA8984E1BD1B4CB00B37552 /* dump_xsum.c */; settings = {ASSET_TAGS = (); }; };
+		DBA898601BD1B4CB00B37552 /* hash_functions.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898501BD1B4CB00B37552 /* hash_functions.c */; settings = {ASSET_TAGS = (); }; };
+		DBA898611BD1B4CB00B37552 /* hash_table.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898521BD1B4CB00B37552 /* hash_table.c */; settings = {ASSET_TAGS = (); }; };
+		DBA898621BD1B4CB00B37552 /* running_statistics.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898551BD1B4CB00B37552 /* running_statistics.c */; settings = {ASSET_TAGS = (); }; };
+		DBA898631BD1B4CB00B37552 /* swap_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = DBA898581BD1B4CB00B37552 /* swap_mem.c */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBA898381BD1B4B900B37552 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DBA8983A1BD1B4B900B37552 /* sparsehash-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sparsehash-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA8983D1BD1B4B900B37552 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DBA898441BD1B4CB00B37552 /* sparse_multi_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sparse_multi_table.c; path = ../sparse_multi_table.c; sourceTree = "<group>"; };
+		DBA898451BD1B4CB00B37552 /* sparse_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sparse_table.c; path = ../sparse_table.c; sourceTree = "<group>"; };
+		DBA898461BD1B4CB00B37552 /* serialization_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serialization_macros.h; path = ../serialization_macros.h; sourceTree = "<group>"; };
+		DBA898471BD1B4CB00B37552 /* bit_array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bit_array.c; path = ../bit_array.c; sourceTree = "<group>"; };
+		DBA898481BD1B4CB00B37552 /* sparse_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sparse_table.h; path = ../sparse_table.h; sourceTree = "<group>"; };
+		DBA898491BD1B4CB00B37552 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DBA8984A1BD1B4CB00B37552 /* bit_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bit_array.h; path = ../bit_array.h; sourceTree = "<group>"; };
+		DBA8984B1BD1B4CB00B37552 /* boolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = boolean.h; path = ../boolean.h; sourceTree = "<group>"; };
+		DBA8984C1BD1B4CB00B37552 /* circular_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = circular_buffer.c; path = ../circular_buffer.c; sourceTree = "<group>"; };
+		DBA8984D1BD1B4CB00B37552 /* circular_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = circular_buffer.h; path = ../circular_buffer.h; sourceTree = "<group>"; };
+		DBA8984E1BD1B4CB00B37552 /* dump_xsum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dump_xsum.c; path = ../dump_xsum.c; sourceTree = "<group>"; };
+		DBA8984F1BD1B4CB00B37552 /* dump_xsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dump_xsum.h; path = ../dump_xsum.h; sourceTree = "<group>"; };
+		DBA898501BD1B4CB00B37552 /* hash_functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hash_functions.c; path = ../hash_functions.c; sourceTree = "<group>"; };
+		DBA898511BD1B4CB00B37552 /* hash_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash_functions.h; path = ../hash_functions.h; sourceTree = "<group>"; };
+		DBA898521BD1B4CB00B37552 /* hash_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hash_table.c; path = ../hash_table.c; sourceTree = "<group>"; };
+		DBA898531BD1B4CB00B37552 /* hash_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash_table.h; path = ../hash_table.h; sourceTree = "<group>"; };
+		DBA898541BD1B4CB00B37552 /* hash_timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash_timestamp.h; path = ../hash_timestamp.h; sourceTree = "<group>"; };
+		DBA898551BD1B4CB00B37552 /* running_statistics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = running_statistics.c; path = ../running_statistics.c; sourceTree = "<group>"; };
+		DBA898561BD1B4CB00B37552 /* running_statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = running_statistics.h; path = ../running_statistics.h; sourceTree = "<group>"; };
+		DBA898571BD1B4CB00B37552 /* sparse_multi_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sparse_multi_table.h; path = ../sparse_multi_table.h; sourceTree = "<group>"; };
+		DBA898581BD1B4CB00B37552 /* swap_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = swap_mem.c; path = ../swap_mem.c; sourceTree = "<group>"; };
+		DBA898591BD1B4CB00B37552 /* swap_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swap_mem.h; path = ../swap_mem.h; sourceTree = "<group>"; };
+		DBA898661BD1BD9A00B37552 /* sparsetable_entry_type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sparsetable_entry_type.h; path = ../sparsetable_entry_type.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBA898371BD1B4B900B37552 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBA898311BD1B4B900B37552 = {
+			isa = PBXGroup;
+			children = (
+				DBA898661BD1BD9A00B37552 /* sparsetable_entry_type.h */,
+				DBA898441BD1B4CB00B37552 /* sparse_multi_table.c */,
+				DBA898451BD1B4CB00B37552 /* sparse_table.c */,
+				DBA898461BD1B4CB00B37552 /* serialization_macros.h */,
+				DBA898471BD1B4CB00B37552 /* bit_array.c */,
+				DBA898481BD1B4CB00B37552 /* sparse_table.h */,
+				DBA898491BD1B4CB00B37552 /* README.md */,
+				DBA8984A1BD1B4CB00B37552 /* bit_array.h */,
+				DBA8984B1BD1B4CB00B37552 /* boolean.h */,
+				DBA8984C1BD1B4CB00B37552 /* circular_buffer.c */,
+				DBA8984D1BD1B4CB00B37552 /* circular_buffer.h */,
+				DBA8984E1BD1B4CB00B37552 /* dump_xsum.c */,
+				DBA8984F1BD1B4CB00B37552 /* dump_xsum.h */,
+				DBA898501BD1B4CB00B37552 /* hash_functions.c */,
+				DBA898511BD1B4CB00B37552 /* hash_functions.h */,
+				DBA898521BD1B4CB00B37552 /* hash_table.c */,
+				DBA898531BD1B4CB00B37552 /* hash_table.h */,
+				DBA898541BD1B4CB00B37552 /* hash_timestamp.h */,
+				DBA898551BD1B4CB00B37552 /* running_statistics.c */,
+				DBA898561BD1B4CB00B37552 /* running_statistics.h */,
+				DBA898571BD1B4CB00B37552 /* sparse_multi_table.h */,
+				DBA898581BD1B4CB00B37552 /* swap_mem.c */,
+				DBA898591BD1B4CB00B37552 /* swap_mem.h */,
+				DBA8983C1BD1B4B900B37552 /* sparsehash-test */,
+				DBA8983B1BD1B4B900B37552 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBA8983B1BD1B4B900B37552 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8983A1BD1B4B900B37552 /* sparsehash-test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBA8983C1BD1B4B900B37552 /* sparsehash-test */ = {
+			isa = PBXGroup;
+			children = (
+				DBA8983D1BD1B4B900B37552 /* main.c */,
+			);
+			path = "sparsehash-test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBA898391BD1B4B900B37552 /* sparsehash-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBA898411BD1B4B900B37552 /* Build configuration list for PBXNativeTarget "sparsehash-test" */;
+			buildPhases = (
+				DBA898361BD1B4B900B37552 /* Sources */,
+				DBA898371BD1B4B900B37552 /* Frameworks */,
+				DBA898381BD1B4B900B37552 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sparsehash-test";
+			productName = "sparsehash-test";
+			productReference = DBA8983A1BD1B4B900B37552 /* sparsehash-test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBA898321BD1B4B900B37552 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Chris Johnson";
+				TargetAttributes = {
+					DBA898391BD1B4B900B37552 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = DBA898351BD1B4B900B37552 /* Build configuration list for PBXProject "sparsehash-test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DBA898311BD1B4B900B37552;
+			productRefGroup = DBA8983B1BD1B4B900B37552 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBA898391BD1B4B900B37552 /* sparsehash-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBA898361BD1B4B900B37552 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA8985A1BD1B4CB00B37552 /* sparse_multi_table.c in Sources */,
+				DBA8985C1BD1B4CB00B37552 /* bit_array.c in Sources */,
+				DBA898621BD1B4CB00B37552 /* running_statistics.c in Sources */,
+				DBA898611BD1B4CB00B37552 /* hash_table.c in Sources */,
+				DBA8985B1BD1B4CB00B37552 /* sparse_table.c in Sources */,
+				DBA898631BD1B4CB00B37552 /* swap_mem.c in Sources */,
+				DBA8985E1BD1B4CB00B37552 /* circular_buffer.c in Sources */,
+				DBA898601BD1B4CB00B37552 /* hash_functions.c in Sources */,
+				DBA8983E1BD1B4B900B37552 /* main.c in Sources */,
+				DBA8985F1BD1B4CB00B37552 /* dump_xsum.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DBA8983F1BD1B4B900B37552 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DBA898401BD1B4B900B37552 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DBA898421BD1B4B900B37552 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBA898431BD1B4B900B37552 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBA898351BD1B4B900B37552 /* Build configuration list for PBXProject "sparsehash-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA8983F1BD1B4B900B37552 /* Debug */,
+				DBA898401BD1B4B900B37552 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBA898411BD1B4B900B37552 /* Build configuration list for PBXNativeTarget "sparsehash-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBA898421BD1B4B900B37552 /* Debug */,
+				DBA898431BD1B4B900B37552 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBA898321BD1B4B900B37552 /* Project object */;
+}

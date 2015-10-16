@@ -8,20 +8,20 @@ extern "C" {
 
 #include "hash_functions.h"
 #include "serialization_macros.h"
-#include "sparse_multi_table.h"
-
 #define HASH_MIN_BUCKETS 32
 
-typedef void* key_t;
-typedef void* val_t;
+typedef void* sparsekey_t;
+typedef void* sparseval_t;
 
 typedef struct {
-  key_t key;
-  val_t value;
+  sparsekey_t key;
+  sparseval_t value;
 } hash_bucket;
 
-typedef boolean (*eq_func_type)(key_t,val_t);
-typedef unsigned int (*hash_func_type)(key_t);
+#include "sparse_multi_table.h"
+
+typedef boolean (*eq_func_type)(sparsekey_t,sparseval_t);
+typedef unsigned int (*hash_func_type)(sparsekey_t);
 
 typedef struct {
   sparse_multi_table sparse_table;
@@ -36,11 +36,11 @@ void hash_dispose(hash_table* table);
 unsigned int hash_memory_used(hash_table * table);
 unsigned char * hash_dump(hash_table* table, unsigned char * memptr);
 unsigned char * hash_lift(hash_table* table, unsigned char * memptr, hash_func_type hash_func, eq_func_type eq_func);
-void hash_add(hash_table* table, key_t key, val_t value);
+void hash_add(hash_table* table, sparsekey_t key, sparseval_t value);
 void hash_resize(hash_table* table, unsigned int size);
-boolean hash_remove(hash_table* table, key_t key);
-boolean hash_lookup(hash_table* table, key_t key, val_t value);
-void hash_apply(hash_table* table, boolean(*fp)(sparse_table_entry const*, void * ), void * data );
+boolean hash_remove(hash_table* table, sparsekey_t key);
+boolean hash_lookup(hash_table* table, sparsekey_t key, sparseval_t value);
+void hash_apply(hash_table* table, boolean(*fp)(const hash_bucket *, void * ), void * data );
 
 #ifdef __cplusplus
 }

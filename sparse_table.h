@@ -10,8 +10,8 @@ extern "C" {
 
 #include <stdlib.h> /* realloc, free, malloc */
 #include <string.h> /* memcpy, memmove */
+#include "sparsetable_entry_type.h"
 
-#define sparse_table_entry void*
 typedef struct {
   bit_array presence;
   unsigned char * entries;
@@ -28,8 +28,8 @@ unsigned char * sparse_lift(sparse_table *st, unsigned char * memptr);
 void sparse_remove(sparse_table *st, int idx);
 boolean sparse_get(sparse_table *st,  sparse_table_entry value, int idx);
 void sparse_update(sparse_table *st, sparse_table_entry entry, int idx );
-void sparse_apply(sparse_table *st, boolean(*fp)(sparse_table_entry const*, void * ), void * data );
-void sparse_apply_eat(sparse_table *st, void(*fp)(sparse_table_entry const*, void * ), void * data );
+void sparse_apply(sparse_table *st, boolean(*fp)(const sparse_table_entry, void * ), void * data );
+void sparse_apply_eat(sparse_table *st, void(*fp)(const sparse_table_entry, void * ), void * data );
 
 #ifdef __cplusplus
 }

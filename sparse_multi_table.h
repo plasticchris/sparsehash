@@ -21,8 +21,8 @@ typedef struct {
 boolean sparse_multi_get(sparse_multi_table* smt,  sparse_table_entry value, int idx);
 void sparse_multi_update(sparse_multi_table *smt, sparse_table_entry entry, int idx);
 void sparse_multi_remove(sparse_multi_table *smt, int idx);
-void sparse_multi_apply(sparse_multi_table *smt, boolean(*fp)(sparse_table_entry const*, void * ), void * data );
-void sparse_multi_apply_eat(sparse_multi_table *smt, void(*fp)(sparse_table_entry const*, void * ), void * data );
+void sparse_multi_apply(sparse_multi_table *smt, boolean(*fp)(const sparse_table_entry, void * ), void * data );
+void sparse_multi_apply_eat(sparse_multi_table *smt, void(*fp)(const sparse_table_entry, void * ), void * data );
 void sparse_multi_init(sparse_multi_table* smt, int size, int entry_sz);
 void sparse_multi_dispose(sparse_multi_table *smt);
 unsigned int sparse_multi_memory_used(sparse_multi_table * smt);

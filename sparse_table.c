@@ -38,7 +38,7 @@ void sparse_remove(sparse_table *st, int idx) {
   memmove((void*)(st->entries + pos * st->entry_sz),
           (void*)(st->entries + ( pos + 1 ) * st->entry_sz),
           (st->size-- - pos - 1)*st->entry_sz);
-  st->entries = (unsigned char*)pvPortRealloc(st->entries, --st->allocated*st->entry_sz);
+  st->entries = (unsigned char*)realloc(st->entries, --st->allocated*st->entry_sz);
 }
 boolean sparse_get(sparse_table *st, sparse_table_entry value, int idx) {
   if( !bit_array_get(&st->presence, idx) )
@@ -53,7 +53,7 @@ void sparse_update(sparse_table *st, sparse_table_entry entry, int idx ) {
   } else {
     bit_array_put(&st->presence, idx, TRUE);
     if( ++st->size > st->allocated ) {
-      st->entries = (unsigned char*)pvPortRealloc(st->entries, st->size*st->entry_sz);
+      st->entries = (unsigned char*)realloc(st->entries, st->size*st->entry_sz);
       ++st->allocated;
     }
     memmove( (void*)(st->entries + ( pos + 1 ) * st->entry_sz),
@@ -61,17 +61,17 @@ void sparse_update(sparse_table *st, sparse_table_entry entry, int idx ) {
     memcpy( (void*)(st->entries + pos * st->entry_sz), entry, st->entry_sz );
   }
 }
-void sparse_apply(sparse_table *st, boolean(*fp)(sparse_table_entry const*, void * ), void * data ) {
+void sparse_apply(sparse_table *st, boolean(*fp)(const sparse_table_entry, void * ), void * data ) {
   int i;
   for(i=st->size-1;i>=0;--i)
-    if(!fp( (sparse_table_entry const*)(st->entries + i * st->entry_sz) ,data))
+    if(!fp( (sparse_table_entry)(st->entries + i * st->entry_sz) ,data))
       return;
 }
-void sparse_apply_eat(sparse_table *st, void(*fp)(sparse_table_entry const*, void * ), void * data ) {
+void sparse_apply_eat(sparse_table *st, void(*fp)(const sparse_table_entry, void * ), void * data ) {
   int i;
   for(i=st->size-1;i>=0;--i) {
-    fp((sparse_table_entry const*)(st->entries + i * st->entry_sz),data);
-    st->entries = (unsigned char*)pvPortRealloc(st->entries, --st->size*st->entry_sz);
+    fp((sparse_table_entry)(st->entries + i * st->entry_sz),data);
+    st->entries = (unsigned char*)realloc(st->entries, --st->size*st->entry_sz);
     --st->allocated;
   }
 }

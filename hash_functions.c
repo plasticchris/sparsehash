@@ -67,8 +67,8 @@ unsigned int int_hash_func(void* a) {
 	return hash((char*) a, sizeof(int), 0xbeefcafe);
 }
 boolean str_eq_func(void* a, void* b) {
-	int len_a = strlen(a);
-	int len_b = strlen(b);
+	unsigned long len_a = strlen(a);
+	unsigned long len_b = strlen(b);
 	if( len_a == len_b ) {
 		return memcmp(a, b, len_a) == 0;
 	}
@@ -76,5 +76,5 @@ boolean str_eq_func(void* a, void* b) {
 }
 unsigned int str_hash_func(void* a) {
 	//return *(int*)a; //for very random data...
-	return hash((char*) a, strlen(a), 0xbeefcafe);
+	return hash((char*) a, (unsigned int)strlen(a), 0xbeefcafe);
 }

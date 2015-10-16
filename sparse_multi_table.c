@@ -20,12 +20,12 @@ void sparse_multi_update(sparse_multi_table *smt, sparse_table_entry entry, int 
 void sparse_multi_remove(sparse_multi_table *smt, int idx) {
   MULTI_WRAP_VOID(sparse_remove, &smt->entries[n], idx);
 }
-void sparse_multi_apply(sparse_multi_table *smt, boolean(*fp)(sparse_table_entry const*, void * ), void * data ) {
+void sparse_multi_apply(sparse_multi_table *smt, boolean(*fp)(const sparse_table_entry, void * ), void * data ) {
   unsigned int i;
   for(i=0;i<smt->num_tbls;++i)
     sparse_apply(&smt->entries[i], fp, data);
 }
-void sparse_multi_apply_eat(sparse_multi_table *smt, void(*fp)(sparse_table_entry const*, void * ), void * data ) {
+void sparse_multi_apply_eat(sparse_multi_table *smt, void(*fp)(const sparse_table_entry, void * ), void * data ) {
   unsigned int i;
   for(i=0;i<smt->num_tbls;++i) {
     sparse_apply_eat(&smt->entries[i], fp, data);
