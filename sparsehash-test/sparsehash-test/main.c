@@ -19,6 +19,7 @@
 
 boolean print_histogram(hash_bucket const* entry, void * data ) {
     printf( "%s %d\n", entry->key, *(unsigned int*)entry->value );
+    free( entry->key );
     return TRUE;
 }
 
@@ -45,6 +46,7 @@ int main(int argc, const char * argv[]) {
             hash_add( &t, word, count);
         }
     }
-    hash_apply( &t, print_histogram, NULL );
+    hash_apply(&t, print_histogram, NULL);
+    hash_dispose(&t);
     return 0;
 }
