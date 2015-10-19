@@ -60,18 +60,10 @@ boolean hash_remove(hash_table* table, sparsekey_t key) {
     if( 10*(--table->filled_buckets+2) / table->bucket_size < 2 )
         hash_resize(table, table->bucket_size / 2); );
 }
-boolean hash_lookup(hash_table* table, sparsekey_t key, sparseval_t value) {  hash_bucket bucket;
-  int idx = table->hash_func(key) & (table->bucket_size-1);
-  unsigned int p = 2;
-  while( sparse_multi_get(&table->sparse_table, &bucket, idx) ) {
-    if( table->eq_func(bucket.key, key) ) {
-      memcpy( value, &bucket.value, sizeof(void*) );
-      return TRUE;
-    }
-    p = (p*p + p)/2;
-    idx=(idx+p) & (table->bucket_size-1);
-  }
-  return FALSE;
+boolean hash_lookup(hash_table* table, sparsekey_t key, sparseval_t value) {
+  HASH_LOOKUP(name, table, key, key_t,
+		  memcpy( value, &bucket.value, sizeof(void*) )
+  );
 }
 void hash_add(hash_table* table, sparsekey_t key, sparseval_t value) {
   hash_bucket in_bucket = {key, value};
