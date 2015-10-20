@@ -10,14 +10,7 @@ extern "C" {
 #include "serialization_macros.h"
 #define HASH_MIN_BUCKETS 32
 
-typedef void* sparsekey_t;
-typedef void* sparseval_t;
-
-typedef struct {
-  sparsekey_t key;
-  sparseval_t value;
-} hash_bucket;
-
+#include "hash_bucket.h"
 #include "sparse_multi_table.h"
 
 typedef boolean (*eq_func_type)(sparsekey_t,sparseval_t);

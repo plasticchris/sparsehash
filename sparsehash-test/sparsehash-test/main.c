@@ -20,6 +20,7 @@
 boolean print_histogram(hash_bucket const* entry, void * data ) {
     printf( "%s %d\n", entry->key, *(unsigned int*)entry->value );
     free( entry->key );
+    free( entry->value );
     return TRUE;
 }
 
